@@ -1,7 +1,26 @@
+function formvalid(){
+    let name = document.form.nm.value;
+    let password = document.form.password.value;
 
-const car='tata';
-{
-    const car='toyota';
-    console.log('inside block',car);
+if(name == null || name == ""){
+    alert("Name can't be empty");
+    return false;
+} else if (password == null || password == ""){
+    alert("Password can't be empty");
+    return false;
+} 
 }
-console.log('outside block',car);
+
+function myFunction() {
+    var x = document.getElementById("myInput");
+    if (x.type === "password") {
+      x.type = "text";
+    } else {
+      x.type = "password";
+    }
+  }
+//function for going to nextpage//
+const btn = document.getElementById("fb")
+btn.addEventListener('mouseover',()=>{
+    window.location.href('h.html');
+})
