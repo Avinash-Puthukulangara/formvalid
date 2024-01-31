@@ -1,26 +1,25 @@
-function formvalid(){
-    let name = document.form.nm.value;
-    let password = document.form.password.value;
 
-if(name == null || name == ""){
+    let name = document.getElementById("name");
+    let password = document.getElementById("password");
+    let btn1 = document.getElementById("btn1");
+
+btn1.addEventListener('click', ()=>{
+  if (name.value.trim() == ''){
     alert("Name can't be empty");
-    return false;
-} else if (password == null || password == ""){
+  } else if (password.value.trim() == ''){
     alert("Password can't be empty");
-    return false;
-} 
-}
+  } else if (password.value.trim().length<8){
+    alert("Password should contain minimum of 8 characters");
+  } else {
+    alert("Successfully logged in"); 
+  }
+})
 
 function myFunction() {
-    var x = document.getElementById("myInput");
+    var x = document.getElementById("password");
     if (x.type === "password") {
       x.type = "text";
     } else {
       x.type = "password";
     }
   }
-//function for going to nextpage//
-const btn = document.getElementById("fb")
-btn.addEventListener('mouseover',()=>{
-    window.location.href('h.html');
-})
